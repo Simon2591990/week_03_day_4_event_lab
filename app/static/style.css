@@ -1,3 +1,21 @@
 body{
-    background-color: rgb(11, 94, 167);
+    background-color: rgb(110, 110, 255);
+}
+
+#event_form {
+   
+}
+
+.event_sheet{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: grey;
+    justify-content: space-between;
+}
+
+#events{
+    display: flex;
+    margin: 20px ; 
+    justify-content: space-around; 
 }

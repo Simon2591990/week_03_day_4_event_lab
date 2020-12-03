@@ -3,7 +3,7 @@
 {%block content%}
 
 <h1>Upcoming Events</h1>
-
+<div id=event_form>
 <form action="/add-event" method="post">
     <label for="name_of_event">Name of Event</label>
     <input type="text" name="name_of_event" id="name_of_event">
@@ -14,14 +14,22 @@
     <label for="room_location">Room Location</label>
     <input type="text" name="room_location" id="room_location">
     <label for="description">Description</label>
-    <input type="text" name="description" id="description">
+    <textarea name="description" id="description" rows = "2" cols = "30"></textarea>
     <input type="submit" value="Add Event">
 </form>
+</div>
+<div id=events>
     {% for event in events %}
-    <div>
+    <div class=event_sheet>
         <p>
-            {{event.name_of_event}} {{event.description}} {{event.date}} {{event.no_of_guests}} {{event.location}} 
+            <h3>{{event.name_of_event}} </h3>
+        
+            <b>{{event.description}}</b>
+            <b>When:{{event.date}}</b>
+            Guests: {{event.no_of_guests}} <br>
+            Room: {{event.location}}
         </p> 
     </div>
     {% endfor%}
+</div>
 {%endblock%}
