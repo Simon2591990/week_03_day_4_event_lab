@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Events List</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <hr>
+        {%block content%}
+        {%endblock%}
+    </body>
+</html>
